@@ -1,0 +1,35 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "clsx": "^1.1.0",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-is": "^16.13.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production --output dist/index.js",
+    "test": "jest",
+    "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
+  },
+  "devDependencies": {
+    "@neutrinojs/jest": "^9.1.0",
+    "@neutrinojs/react-components": "^9.1.0",
+    "@neutrinojs/standardjs": "^9.1.0",
+    "eslint": "^6",
+    "jest": "^25",
+    "neutrino": "^9.1.0",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-test-renderer": "^16.13.1",
+    "webpack": "^4",
+    "webpack-cli": "^3",
+    "webpack-dev-server": "^3",
+    "clsx": "^1.1.0"
+  }
+}
