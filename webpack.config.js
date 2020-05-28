@@ -6,7 +6,7 @@ const EsmWebpackPlugin = require("@purtuga/esm-webpack-plugin");
 let config = neutrino().webpack();
 
 config.output.library = "LIB"
-config.output.libraryTarget = 'var'
+config.output.libraryTarget = 'umd'
 config.output.umdNamedDefine = false
 config.plugins = [ ...config.plugins, new EsmWebpackPlugin() ]
 
