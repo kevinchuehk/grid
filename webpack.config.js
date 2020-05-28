@@ -2,12 +2,21 @@
 // changes is via the presets' options or Neutrino's API in `.neutrinorc.js` instead.
 // Neutrino's inspect feature can be used to view/export the generated configuration.
 const neutrino = require('neutrino');
+const path = require('path')
 const EsmWebpackPlugin = require("@purtuga/esm-webpack-plugin");
 let config = neutrino().webpack();
 
 config.output.library = "LIB"
-config.output.libraryTarget = 'umd'
-config.output.umdNamedDefine = false
-config.plugins = [ ...config.plugins, new EsmWebpackPlugin() ]
+config.output.path = path.resolve(__dirname, 'dist/umd')
 
-module.exports = config
+let cjs = {
+    ...config,
+    output: {
+        filename: '[name].js',
+        library: 'LIB',
+        libraryTarget: 'commonjs',
+        path: path.resolve(__dirname, 'dist/cjs')
+    }
+}
+
+module.exports = [ config, cjs ]

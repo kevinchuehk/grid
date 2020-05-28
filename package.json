@@ -1,7 +1,8 @@
 {
   "name": "grid",
   "version": "1.0.0",
-  "module": "build/Grid.js",
+  "module": "dist/umd/Grid.js",
+  "main": "dist/cjs/Grid.js",
   "license": "MIT",
   "peerDependencies": {
     "clsx": "^1.1.0",
