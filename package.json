@@ -21,6 +21,7 @@
     "@neutrinojs/jest": "^9.1.0",
     "@neutrinojs/react-components": "^9.1.0",
     "@neutrinojs/standardjs": "^9.1.0",
+    "@purtuga/esm-webpack-plugin": "^1.2.1",
     "clsx": "^1.1.0",
     "eslint": "^6",
     "esm": "^3.2.25",
